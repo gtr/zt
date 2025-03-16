@@ -1,0 +1,39 @@
+zt
+------
+
+zt is a fast `tree` implementation in zig. it offers git support (and much more coming soon).
+
+Usage Information
+-----------------
+USAGE:
+  zt [OPTIONS] [PATH...]
+ARGUMENTS:
+  PATH  Directory path(s) to display, defaults to current directory
+OPTIONS:
+  -a, --all             Show all files, including hidden
+  -d, --depth LEVEL     Limit directory display to LEVEL
+  -f, --full-path       Show full file paths
+  --dirs-only           Show directories only
+  Git Options:
+  -g, --git             Enable Git status integration (default if in repo)
+  --no-git              Disable Git status integration
+  --no-gitignore        Don't respect .gitignore patterns
+  --no-color            Disable colored output
+  -h, --help            Display this help message
+  -v, --version         Display version information
+
+
+Example
+-------
+$ ./zig-out/bin/zt 
+/Users/gerardo/gtr/zt [git: main]
+├── src 
+│   ├── main.zig M
+│   └── root.zig M
+├── zig-out 
+│   ├── bin 
+│   │   └── zt 
+│   └── lib 
+│       └── libzt.a 
+├── README ?
+├── build.zig
